@@ -1,2 +1,11 @@
+import logging
+
+logger = logging.getLogger(__name__)
+
+
 def fetch(client):
-    return client.get('/data')
+    try:
+        return client.get('/data')
+    except TimeoutError as exc:
+        logger.warning("upstream timeout fetching /data: %s", exc)
+        return None
