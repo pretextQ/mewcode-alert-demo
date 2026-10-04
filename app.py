@@ -1,2 +1,5 @@
 def fetch(client):
-    return client.get('/data')
+    try:
+        return client.get('/data')
+    except TimeoutError:
+        return None
