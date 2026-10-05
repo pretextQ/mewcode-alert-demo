@@ -1,2 +1,5 @@
 def owner_name(user):
-    return user['profile']['name'].upper()
+    profile = user.get('profile')
+    if not profile:
+        return None
+    return profile['name'].upper()
