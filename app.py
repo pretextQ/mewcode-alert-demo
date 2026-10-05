@@ -1,4 +1,5 @@
-TIMEOUT_SECONDS = 0
+# fix(REPLAY-B-01): timeout config was 0, restored to 30s
+TIMEOUT_SECONDS = 30
 
 
 def timeout():
