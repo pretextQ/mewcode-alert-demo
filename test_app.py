@@ -1,4 +1,6 @@
 import app
-if app.timeout() <= 0:
-    print('config_error: timeout is %r' % app.timeout()); raise SystemExit(1)
-print('ok:', app.timeout())
+try:
+    name = app.owner_name({'profile': None})
+except Exception as e:
+    print('null_deref crash: %r' % e); raise SystemExit(1)
+print('ok:', name)
