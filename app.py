@@ -1,2 +1,5 @@
-def fetch(client):
-    return client.get('/data')
+TIMEOUT_SECONDS = 0
+
+
+def timeout():
+    return TIMEOUT_SECONDS
