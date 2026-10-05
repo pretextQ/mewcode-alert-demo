@@ -1,4 +1,4 @@
-TIMEOUT_SECONDS = 0
+TIMEOUT_SECONDS = 30
 
 
 def timeout():
