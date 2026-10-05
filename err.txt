@@ -1,0 +1,8 @@
+upstream timed out fetching /data
+Traceback (most recent call last):
+  File "C:\Users\32519\AppData\Local\Temp\m1demo\.mewcode\worktrees\job-4d71ef5a74e8\app.py", line 8, in fetch
+    return client.get('/data')
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\32519\AppData\Local\Temp\m1demo\.mewcode\worktrees\job-4d71ef5a74e8\test_app.py", line 5, in get
+    raise TimeoutError('upstream timed out')
+TimeoutError: upstream timed out
