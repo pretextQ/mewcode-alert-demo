@@ -1,5 +1,2 @@
-TIMEOUT_SECONDS = 0
-
-
-def timeout():
-    return TIMEOUT_SECONDS
+def owner_name(user):
+    return user['profile']['name'].upper()
