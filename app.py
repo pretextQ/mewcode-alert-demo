@@ -1,2 +1,2 @@
-def owner_name(user):
-    return user['profile']['name'].upper()
+def fetch(client):
+    return client.get('/data')
