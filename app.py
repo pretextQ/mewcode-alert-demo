@@ -1,2 +1,6 @@
 def owner_name(user):
-    return user['profile']['name'].upper()
+    # fix(DemoBug): profile can be null; dereferencing it crashed owner_name
+    profile = user['profile']
+    if profile is None:
+        return None
+    return profile['name'].upper()
