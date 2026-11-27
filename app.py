@@ -1,4 +1,4 @@
-TIMEOUT_SECONDS = 0
+TIMEOUT_SECONDS = 5
 
 
 def configured_timeout():
