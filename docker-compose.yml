@@ -1,6 +1,7 @@
 services:
   cache:
     image: redis:7-alpine
+    user: '999:1000'
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 2s
