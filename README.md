@@ -1,7 +1,3 @@
-# mewcode-alert-demo
+# MewCode acceptance fixture
 
-Throwaway repository for demonstrating MewCode's alert-driven fix pipeline.
-Planted bug: `unhandled_timeout`.
-
-Has a docker-compose dependency (`cache`) and an integration test that
-only passes when the service layer starts it (M2 W4).
+Synthetic timeout regression for a disposable verification branch. Redis is used for integration verification.

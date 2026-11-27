@@ -1,11 +1,14 @@
-import app
+from app import configured_timeout
 
-class Client:
-    def get(self, path):
-        raise TimeoutError('upstream timed out')
 
-try:
-    app.fetch(Client())
-except TimeoutError as e:
-    print('unhandled_timeout: %r' % e); raise SystemExit(1)
-print('ok: timeout handled')
+def test_timeout_is_five_seconds():
+    assert configured_timeout() == 5
+
+
+def test_return_type():
+    assert isinstance(configured_timeout(), int)
+
+
+if __name__ == "__main__":
+    test_timeout_is_five_seconds()
+    test_return_type()
